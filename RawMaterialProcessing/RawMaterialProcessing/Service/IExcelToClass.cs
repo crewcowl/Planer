@@ -2,6 +2,6 @@
 {
     interface IExcelToClass
     {
-        void GetData(string [] data);
+        void SetData(string [] data);
     }
 }

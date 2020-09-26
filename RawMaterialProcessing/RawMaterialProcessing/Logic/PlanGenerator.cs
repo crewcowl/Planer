@@ -4,10 +4,11 @@ using System.Linq;
 
 namespace RawMaterialProcessing.Logic
 {
-    static class PlanGenerator
+     class PlanGenerator
     {
+        //Убрать статику
         /*generating plan*/
-        public static List<Plan> GeneratePlan(List<Parties> parties, List<MachineTools> machines, List<Times> times)
+        public List<Plan> GeneratePlan(List<Parties> parties, List<MachineTools> machines, List<Times> times)
         {
             List<MachineWorkTime> machineWorkTimes = new List<MachineWorkTime>();
             
@@ -19,7 +20,7 @@ namespace RawMaterialProcessing.Logic
             return GetPlans(parties, machines, times, machineWorkTimes);
         }
         
-        private static List<Plan> GetPlans(List<Parties> parties, List<MachineTools> machines, List<Times> times, List<MachineWorkTime> machineWorkTimes)
+        private List<Plan> GetPlans(List<Parties> parties, List<MachineTools> machines, List<Times> times, List<MachineWorkTime> machineWorkTimes)
         {
             List<Plan> plan = new List<Plan>();
             
@@ -28,7 +29,7 @@ namespace RawMaterialProcessing.Logic
             return plan;
         }
 
-        private static Plan GetPlan(List<Times> times, List<MachineTools> machines,
+        private Plan GetPlan(List<Times> times, List<MachineTools> machines,
             List<MachineWorkTime> machineWorkTimes, Parties part)
         {
             var getTimes = times.FindAll(t => t.nomenclaturesId == part.nomenclaturesId);
@@ -43,7 +44,7 @@ namespace RawMaterialProcessing.Logic
         }
 
         /*find machine with min work time*/
-        private static MachineTools GetMachineWithMinWorkTime(List<MachineTools> machines,
+        private MachineTools GetMachineWithMinWorkTime(List<MachineTools> machines,
             List<MachineWorkTime> machineWorkTimes, List<Times> workingTimes)
         {
             var checkTime = machineWorkTimes.Find(m => m.Machine.id == workingTimes.Min().machineToolId).WorkingTime;

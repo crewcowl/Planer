@@ -1,0 +1,7 @@
+D:\projects\C#\Planer\RawMaterialProcessing\RawMaterialProcessing\bin\Debug\RawMaterialProcessing.exe.config
+D:\projects\C#\Planer\RawMaterialProcessing\RawMaterialProcessing\bin\Debug\RawMaterialProcessing.exe
+D:\projects\C#\Planer\RawMaterialProcessing\RawMaterialProcessing\bin\Debug\RawMaterialProcessing.pdb
+D:\projects\C#\Planer\RawMaterialProcessing\RawMaterialProcessing\obj\Debug\RawMaterialProcessing.csprojAssemblyReference.cache
+D:\projects\C#\Planer\RawMaterialProcessing\RawMaterialProcessing\obj\Debug\RawMaterialProcessing.csproj.CoreCompileInputs.cache
+D:\projects\C#\Planer\RawMaterialProcessing\RawMaterialProcessing\obj\Debug\RawMaterialProcessing.exe
+D:\projects\C#\Planer\RawMaterialProcessing\RawMaterialProcessing\obj\Debug\RawMaterialProcessing.pdb

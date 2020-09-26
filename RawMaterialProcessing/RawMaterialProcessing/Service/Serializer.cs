@@ -3,10 +3,10 @@ using System.IO;
 
 namespace RawMaterialProcessing.Service
 {
-    static class Serializer<T> where T: IExcelToClass, new()
+    class Serializer<T> where T: IExcelToClass, new()
     {
 
-        public static List<T> GetObjectFromXlsString(string path) {
+        public List<T> GetObjectFromXlsString(string path) {
             List<T> objList = new List<T>();
             if (System.IO.File.Exists(path))
             {
@@ -19,7 +19,7 @@ namespace RawMaterialProcessing.Service
                     foreach (var dt in data)
                     {
                         T classObj2 = new T();
-                        classObj2.GetData(dt.Split(';'));
+                        classObj2.SetData(dt.Split(';'));
                         objList.Add(classObj2);
                     }
                 }

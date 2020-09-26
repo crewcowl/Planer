@@ -15,12 +15,12 @@ namespace RawMaterialProcessing
             string path3 = @".\..\..\InputData\parties.xlsx";
             string path4 = @".\..\..\InputData\times.xlsx";
 
-            List<MachineTools> machines = Serializer<MachineTools>.GetObjectFromXlsString(path1);
-            List<Nomenclatures> nomeclatures = Serializer<Nomenclatures>.GetObjectFromXlsString(path2);
-            List<Parties> parties = Serializer<Parties>.GetObjectFromXlsString(path3);
-            List<Times> times = Serializer<Times>.GetObjectFromXlsString(path4);
+            List<MachineTools> machines = new Serializer<MachineTools>().GetObjectFromXlsString(path1);
+            List<Nomenclatures> nomeclatures = new Serializer<Nomenclatures>().GetObjectFromXlsString(path2);
+            List<Parties> parties = new Serializer<Parties>().GetObjectFromXlsString(path3);
+            List<Times> times = new Serializer<Times>().GetObjectFromXlsString(path4);
 
-            List<Plan> plan = PlanGenerator.GeneratePlan(parties, machines, times);
+            List<Plan> plan = new PlanGenerator().GeneratePlan(parties, machines, times);
 
             string path = @"plan.xlsx";
             Excel excel = new Excel();

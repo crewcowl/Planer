@@ -16,7 +16,7 @@ namespace RawMaterialProcessing.Model
             this.nomenclaturesId = nomenclaturesId;
         }
 
-        public void GetData(string[] data)
+        public void SetData(string[] data)
         {
             this.id = int.Parse(data[0]);
             this.nomenclaturesId = int.Parse(data[1]);

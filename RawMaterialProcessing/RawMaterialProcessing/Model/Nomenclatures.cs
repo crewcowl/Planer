@@ -14,7 +14,7 @@ namespace RawMaterialProcessing.Model
             this.id = id;
             this.name = name;
         }
-        public void GetData(string[] data)
+        public void SetData(string[] data)
         {
             this.id = int.Parse(data[0]);
             this.name = data[1];

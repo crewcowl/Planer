@@ -19,7 +19,7 @@ namespace RawMaterialProcessing.Model
             this.times = times;
         }
 
-        public void GetData(string[] data)
+        public void SetData(string[] data)
         {
             this.machineToolId = int.Parse(data[0]);
 
